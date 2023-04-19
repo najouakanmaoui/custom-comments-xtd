@@ -67,6 +67,7 @@ class XtdComment(Comment):
     followup = models.BooleanField(blank=True, default=False,
                                    help_text=_("Notify follow-up comments"))
     nested_count = models.IntegerField(default=0, db_index=True)
+    media = models.FileField(null=True,blank=True,help_text="Link to media. <code>File</code>")
     objects = XtdCommentManager()
     norel_objects = CommentManager()
 
